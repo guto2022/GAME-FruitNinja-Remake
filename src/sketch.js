@@ -9,16 +9,16 @@ var gameOverSound ,knifeSwoosh;
 
 function preload(){
   
-  knifeImage = loadImage("knife.png");
-  monsterImage = loadAnimation("alien1.png","alien2.png")
-  fruit1 = loadImage("fruit1.png");
-  fruit2 = loadImage("fruit2.png");
-  fruit3 = loadImage("fruit3.png");
-  fruit4 = loadImage("fruit4.png");
-  gameOverImage = loadImage("fimdeJogo.png")
+  knifeImage = loadImage("assets/knife.png");
+  monsterImage = loadAnimation("assets/alien1.png","assets/alien2.png")
+  fruit1 = loadImage("assets/fruit1.png");
+  fruit2 = loadImage("assets/fruit2.png");
+  fruit3 = loadImage("assets/fruit3.png");
+  fruit4 = loadImage("assets/fruit4.png");
+  gameOverImage = loadImage("assets/fimdeJogo.png")
   
-  gameOverSound = loadSound("gameover.mp3")
-  knifeSwooshSound = loadSound("knifeSwoosh.mp3")
+  gameOverSound = loadSound("assets/gameover.mp3")
+  knifeSwooshSound = loadSound("assets/knifeSwoosh.mp3")
 }
 
 
@@ -61,16 +61,8 @@ function draw() {
       fruitGroup.destroyEach();
       
        knifeSwooshSound.play();
-      // knifeSwooshSound.play;
-      // knifeSwooshSound();
-      // knifeSwooshSoundplay();
-
-
-      // score=score;
-      // score=+2;
-      // score=2;
-       score=score+2;
       
+       score=score+2; 
     }
     else
     {
@@ -120,9 +112,6 @@ function fruits(){
   //aumentar a velocidade das frutas após a pontuação 4 
 
       fruit.velocityX= (7+(score/4));
-      // fruit.velocityY= (7+(score));
-      // fruit.velocity= (7+(score/4));
-      // fruit.velocityX= (7);
      
     fruit.scale=0.2;
      //fruit.debug=true;
