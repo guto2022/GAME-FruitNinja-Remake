@@ -120,7 +120,7 @@ function bombs() {
     bomb.x = random(80, width - 80);
     bomb.y = height + 30;
 
-    bomb.velocityY = random(-18, -13);
+    bomb.velocityY = -sqrt(2 * 0.45 * height * random(0.5, 0.75));
     bomb.velocityX = random(-3, 3);
 
     bomb.lifetime = 300;
@@ -135,7 +135,7 @@ function fruits(){
     fruit.x = random(80, width - 80);
     fruit.y = height + 30;
 
-    fruit.velocityY = random(-18, -13);
+    fruit.velocityY = -sqrt(2 * 0.45 * height * random(0.5, 0.75));
     fruit.velocityX = random(-3, 3);
      
     fruit.scale=0.2;
